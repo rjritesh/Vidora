@@ -1,8 +1,11 @@
+import Body from "./components/Body"
 
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Body></Body> 
+    </div>
   )
 }
 
