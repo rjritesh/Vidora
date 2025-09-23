@@ -1,3 +1,4 @@
+import MainContainer from "./MainContainer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
@@ -6,6 +7,7 @@ const Body = () => {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
       {/* Navbar at top */}
       <Navbar />
+      <MainContainer></MainContainer>
 
       {/* Sidebar below Navbar */}
       <div className="p-6">

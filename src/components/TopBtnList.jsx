@@ -1,8 +1,11 @@
 import React from 'react'
+import TopButton from './TopButton'
 
 const TopBtnList = () => {
   return (
-    <div>TopBtnList</div>
+    <div>
+      <TopButton></TopButton>
+    </div>
   )
 }
 
