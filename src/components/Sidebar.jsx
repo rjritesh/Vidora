@@ -1,9 +1,13 @@
 import { Home, Compass, Film, Users, Settings } from 'lucide-react';
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
+  if (!isMenuOpen) return null;
   return (
     <aside className="fixed top-16 left-0 h-[calc(100vh-64px)] w-64 bg-white dark:bg-gray-800 shadow-lg p-4 hidden md:flex flex-col gap-2 overflow-y-auto">
-      
+
       {/* Home */}
       <button className="flex items-center gap-3 text-gray-800 dark:text-gray-100 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
         <Home size={26} /> <span className="text-base">Home</span>
