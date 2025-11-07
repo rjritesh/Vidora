@@ -1,9 +1,13 @@
-import React from 'react'
+import Navbar from './components/Navbar';
+import Body from './components/Body';
 
 const App = () => {
   return (
-    <div className='h-screen w-full text-red-600'>App</div>
-  )
-}
+    <div className="bg-zinc-900 min-h-screen text-white">
+      <Navbar />
+      <Body />
+    </div>
+  );
+};
 
-export default App
+export default App;
