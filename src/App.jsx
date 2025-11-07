@@ -1,16 +1,8 @@
-import { Provider } from "react-redux"
-import Body from "./components/Body"
-import store from "./utils/AppStore"
-
+import React from 'react'
 
 const App = () => {
   return (
-    <div>
-      <Provider store={store}>
-         <Body></Body> 
-         </Provider>
-
-    </div>
+    <div className='h-screen w-full text-red-600'>App</div>
   )
 }
 
