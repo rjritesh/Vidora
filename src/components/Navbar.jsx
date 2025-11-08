@@ -1,8 +1,9 @@
 import { AiOutlineMenu } from "react-icons/ai";
-import { CiSearch } from "react-icons/ci";
+import { CiSearch, CiVideoOn } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import { IoIosNotificationsOutline } from "react-icons/io";
+
 
 const Navbar = () => {
   return (
@@ -13,7 +14,8 @@ const Navbar = () => {
           size={38}
           className="text-white cursor-pointer p-2 rounded-full hover:bg-zinc-700"
         />
-        <span className="text-3xl font-bold text-indigo-500 tracking-wide">
+        <span className="text-3xl font-bold text-blue-500 tracking-wide flex gap-2 items-center">
+          <CiVideoOn size={38} />
           Vidora
         </span>
       </div>
