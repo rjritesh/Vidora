@@ -2,8 +2,14 @@ import { AiFillHome } from "react-icons/ai";
 import { MdOutlineExplore, MdSubscriptions, MdVideoLibrary } from "react-icons/md";
 import { FaRegClock, FaRegThumbsUp } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
+  if (!isMenuOpen) return null;
+
+
   return (
     <aside className="w-64 bg-zinc-900 text-white h-[calc(100vh-64px)] p-5 fixed left-0 top-16 flex flex-col justify-between border-r border-zinc-800">
       {/* Navigation Section */}
@@ -33,9 +39,8 @@ const Sidebar = () => {
 // Reusable Sidebar Item
 const SidebarItem = ({ icon, label, active }) => (
   <div
-    className={`flex items-center gap-4 px-3 py-2 rounded-lg cursor-pointer hover:bg-zinc-800 transition ${
-      active ? "bg-zinc-800 font-semibold" : ""
-    }`}
+    className={`flex items-center gap-4 px-3 py-2 rounded-lg cursor-pointer hover:bg-zinc-800 transition ${active ? "bg-zinc-800 font-semibold" : ""
+      }`}
   >
     {icon}
     <span>{label}</span>

@@ -3,16 +3,25 @@ import { CiSearch, CiVideoOn } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
 
 
 const Navbar = () => {
+  const dispatch = useDispatch()
+
+  const handleToggleMenu = () => {
+    dispatch(toggleMenu())
+  }
+
+
   return (
     <nav className="w-full bg-zinc-800 p-4 flex items-center justify-between fixed top-0 left-0 z-50 shadow-md">
       {/* Left: Logo + Menu */}
       <div className="flex items-center gap-3">
         <AiOutlineMenu
           size={38}
-          className="text-white cursor-pointer p-2 rounded-full hover:bg-zinc-700"
+          className="text-white cursor-pointer p-2 rounded-full hover:bg-zinc-700" onClick={handleToggleMenu}
         />
         <span className="text-3xl font-bold text-blue-500 tracking-wide flex gap-2 items-center">
           <CiVideoOn size={38} />
