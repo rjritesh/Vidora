@@ -1,7 +1,9 @@
+import TopButtonCapsule from "./TopButtonCapsule";
+
 const MainContainer = () => {
   return (
     <div className="text-white space-y-4">
-     
+
 
       {/* Example cards
       <div className="grid grid-cols-4 gap-5">
@@ -14,6 +16,7 @@ const MainContainer = () => {
             ></div>
           ))}
       </div> */}
+      <TopButtonCapsule></TopButtonCapsule>
     </div>
   );
 };
