@@ -14,7 +14,7 @@ const VideoCard = ({ info }) => {
       <div className="p-3">
         <h2 className="font-semibold text-sm line-clamp-2">{title}</h2>
         <p className="text-gray-400 text-md mt-1">{channelTitle}</p>
-        <p className="text-gray-500 text-xs">{statistics.viewCount}<span className="mx-1">Views</span>
+        <p className="text-gray-500 text-xs">{Number(statistics.viewCount).toLocaleString()} views
         </p>
       </div>
     </div>
