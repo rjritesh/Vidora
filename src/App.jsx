@@ -17,7 +17,7 @@ const App = () => {
           <Sidebar />
           <Routes>
             <Route path='/' element={<Body />}></Route>
-            <Route path='/watch' element={<WatchPage />}></Route>
+            <Route path='/watch/:id' element={<WatchPage />}></Route>
           </Routes>
 
         </div>

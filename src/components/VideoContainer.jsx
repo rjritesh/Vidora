@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { YOUTUBE_API_KEY } from '../utils/constants'
+import { YOUTUBE_POPULAR_VIDEOS_API } from '../utils/constants'
 import VideoCard from './VideoCard'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const VideoContainer = () => {
   const [videos, setvideos] = useState([])
@@ -11,7 +11,7 @@ const VideoContainer = () => {
   }, [])
 
   const fetchVideo = async () => {
-    const movieData = await fetch(YOUTUBE_API_KEY);
+    const movieData = await fetch(YOUTUBE_POPULAR_VIDEOS_API);
     const json = await movieData.json();
     setvideos(json.items)
   }
@@ -19,7 +19,7 @@ const VideoContainer = () => {
   return (
     <div className="flex flex-wrap gap-4 p-4">
       {videos.map((video) => (
-        <Link to={"/watch"}><VideoCard key={video.id} info={video}></VideoCard></Link>
+        <Link key={video.id} to={"/watch/" + video.id}><VideoCard info={video}></VideoCard></Link>
       ))}
     </div>
   );
